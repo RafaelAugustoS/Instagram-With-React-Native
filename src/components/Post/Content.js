@@ -1,13 +1,13 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 
-const Content = () => {
+const Content = ({likes, username, description}) => {
     return(
         <View style={styles.Container}>
-            <Text style={styles.Likes}>10 likes</Text>
+            <Text style={styles.Likes}>{likes} likes</Text>
             <View style={styles.ContainerText}>
-                <Text style={styles.Name}>rafaelaugusto</Text>
-                <Text style={styles.Text}>The amazing place</Text>
+                <Text style={styles.Name}>{username}</Text>
+                <Text style={styles.Text}>{description}</Text>
             </View>
         </View>
     )

@@ -7,15 +7,15 @@ import {
     Modal
 } from 'react-native'
 
-const ImageProfile = ({Size, onPress}) => {
+const ImageProfile = ({Size, Picture}) => {
     return(
-        <TouchableOpacity style={styles.Button} onPress={onPress}>
+        <TouchableOpacity style={styles.Button}>
             <View style={[styles.Container, {
                 width: Size.width,
                 height: Size.height
             }]}>
                 <Image 
-                    source={require('@/assets/images/rafael.jpeg')}
+                    source={{uri: Picture}}
                     resizeMode="contain"
                     style={styles.Image}
                 />

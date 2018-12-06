@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import Story from '@/components/Story/Story'
 import Post from '@/components/Post'
+import { fetchPosts } from '@/actions/postActions'
 
 class Home extends Component {
     static navigationOptions = {
@@ -18,7 +19,16 @@ class Home extends Component {
     }
 
     componentWillMount(){
-        console.log(this.props)
+        this.props.fetchPosts()
+    }
+
+    _Post = () => {
+        return this.props.posts.map(item => 
+            <Post
+                key={item.user._id}
+                data={item}
+            />
+        )
     }
 
     render(){
@@ -26,9 +36,7 @@ class Home extends Component {
             <View style={styles.Container}>
                 <ScrollView>
                     <Story />
-                    <Post />
-                    <Post />
-                    <Post />
+                    { this._Post() }
                 </ScrollView>
             </View>
         )
@@ -49,4 +57,4 @@ const mapStateToProps = state => ({
     posts: state.posts.items
 })
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps, { fetchPosts })(Home)

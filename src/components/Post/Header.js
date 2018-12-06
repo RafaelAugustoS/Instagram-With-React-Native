@@ -3,15 +3,16 @@ import { View, StyleSheet, Text } from 'react-native'
 import { ImageProfile } from '@/components'
 import Play from '@/components/Story/Play'
 
-const Header = () => {
+const Header = ({username, picture, place}) => {
     return(
         <View style={styles.Container}>
             <ImageProfile 
+                Picture={picture}
                 Size={{width: 30, height: 30}}
             />
             <View style={styles.Name}>
-                <Text>rafaelaugusto</Text>
-                <Text style={styles.Location}>Toronto, Canada</Text>
+                <Text>{username}</Text>
+                <Text style={styles.Location}>{place}</Text>
             </View>
             <Play />
         </View>

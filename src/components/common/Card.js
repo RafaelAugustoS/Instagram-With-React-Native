@@ -5,11 +5,11 @@ import {
     Image
 } from 'react-native'
 
-const Card = () => {
+const Card = ({picture}) => {
     return(
         <View style={styles.Container}>
             <Image
-                source={{uri: 'https://www.falandodeviagem.com.br/imagens20/UberCanada.jpg'}}
+                source={{uri: picture}}
                 resizeMode="cover"
                 style={styles.Image}
             />
