@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { View, StyleSheet, ScrollView, Image } from 'react-native'
+import { connect } from 'react-redux'
+
 import Story from '@/components/Story/Story'
 import Post from '@/components/Post'
 
@@ -13,6 +15,10 @@ class Home extends Component {
                 style={{width: 100}}
             />
         )
+    }
+
+    componentWillMount(){
+        console.log(this.props)
     }
 
     render(){
@@ -39,4 +45,8 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Home
+const mapStateToProps = state => ({
+    posts: state.posts.items
+})
+
+export default connect(mapStateToProps)(Home)
