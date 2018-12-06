@@ -9,8 +9,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-plugin-module-resolver": "^3.1.1",
-    "react": "16.6.1",
-    "react-native": "0.57.5",
+    "react": "^16.6.3",
+    "react-native": "^0.57.5",
     "react-navigation": "^2.18.2"
   },
   "devDependencies": {

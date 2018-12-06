@@ -31,7 +31,8 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
     Container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: '#FFF'
     },
     Logo: {
         width: 100

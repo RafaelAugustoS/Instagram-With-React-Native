@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, StyleSheet, Text } from 'react-native'
 import { ImageProfile } from '@/components'
+import Play from '@/components/Story/Play'
 
 const Header = () => {
     return(
@@ -12,7 +13,7 @@ const Header = () => {
                 <Text>rafaelaugusto</Text>
                 <Text style={styles.Location}>Toronto, Canada</Text>
             </View>
-            
+            <Play />
         </View>
     )
 }
